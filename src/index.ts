@@ -1,5 +1,5 @@
 import './stylesheets/application.scss';
 
-const a:number = 14;
+const a = 14;
 
 alert(a);
