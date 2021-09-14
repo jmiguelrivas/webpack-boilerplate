@@ -1,0 +1,24 @@
+mixin metadata
+  - var site_name = "Miguel Rivas"
+  - var preview_src = "https://miguel-rivas.github.io/zapp/img/preview.png"
+  - var icon_src = "https://miguel-rivas.github.io/zapp/img/favicon"
+  - var description = "Miguel Rivas Portfolio"
+  - var metro_tab_color = "#40bf8a"
+  - var keywords = "miguel, rivas, frontend, developer, portfolio, santo, domingo, dominican, republic, united, states, usa, washington, dc"
+
+  title=site_name
+  meta(name="description" content=description)
+  meta(name="keywords" content=keywords)
+  meta(property="og:title" content=site_name)
+  meta(property="og:site_name" content=site_name)
+  meta(property="og:description" content=description)
+  meta(property="og:image" content=preview_src)
+  meta(property="og:image:type" content="image/png")
+  meta(property="og:image:width" content="1200")
+  meta(property="og:image:height" content="630")
+  link(rel="shortcut icon" type="image/x-icon" href=icon_src + ".ico")
+  each size in [256, 128, 64, 48, 32, 24, 16]
+    link(rel="icon" type="image/png" sizes=size + "x" + size href=icon_src + "-" + size + "x" + size + ".png")
+  link(rel="apple-touch-icon" sizes="180x180" href=icon_src + "-180x180.png")
+  meta(name="msapplication-TileColor" content=metro_tab_color)
+  meta(name="msapplication-TileImage" content=icon_src + "-128x128.png")
